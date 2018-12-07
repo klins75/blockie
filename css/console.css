@@ -1,0 +1,200 @@
+
+* {
+    box-sizing: border-box
+}
+
+html, body {
+    height: 100%;width: 100%;margin: 0 0;
+    background-color: rgb(41, 66, 212);
+}
+
+.console1 {	display: flex; flex-direction: column; height:100%; width:100%; border: 2px solid yellow;
+}
+
+.row {	height: 20%; width: 100%;
+        display: flex; flex-direction: row;
+}
+        
+.module { 	height: 100%; width: 50%;
+            display: flex; flex-direction: row;border:1px solid black;
+        }
+
+.monitor {	height: 100%; width: 99%;
+			display: grid; grid-template-rows:repeat(10, 10%); grid-template-columns: repeat(20, 5%);
+            background-color: #606060; border:1px solid #a0a0b0;
+        }
+ 
+.label {
+    	height: 100%; width: 1%;
+        display: grid; grid-template-rows:repeat(10, 10%); grid-template-columns:
+        repeat(10, 10%);background-color: #a0a0b0;
+        }
+
+.screen {
+    grid-area: 1 / 1 / span 5 / span 17; display: flex; flex-direction: row;
+    margin: 1px 1px 1px 1px; background-color:white;border:1px solid black; 
+    
+    
+}
+
+.screenKey {
+    height: 100%; width: 30%; font-size: 1em; font-weight: bold; 
+    display: flex; flex-direction: column;
+    /* background-color: rgb(51, 51, 51); color: white; */
+}
+
+.screenKeyUpper {
+    height: 35%; width: 100%; font-size: 1em; text-align: center;
+    background-color: rgb(214, 214, 214); font-family: monospace; 
+}
+
+.screenKeyLower {
+    height: 65%; width: 100%; background-color: rgb(255, 255, 255);
+}
+
+.screenValue {
+    height: 100%; width: 70%; font-size: 1.4em; text-align:left; padding: 8px 0 0 6px;
+    font-family: "Droid Sans"; background-color: white;color: #06005a;
+}
+          
+.legend {
+    grid-area: 6 / 1 / span 5 / span 17; display: grid; grid-template-rows: repeat(3,33.3333%); 
+    grid-template-columns: repeat(25, 4%);
+    background-color:#336633;color:#aaeeaa; border-style:inset; margin: 1px 2px 1px 1px;border-color:#558855;
+    font-family:monospace; font-size: .8em;text-align:left;
+}  
+
+.legendKey {
+    font-size: .8em; text-align: left;
+}
+
+.legendValue {
+    font-size: .9em; text-align: left;
+}
+            
+.legend1  {
+    grid-area: 1 / 1 / span 1 / span 3;
+ }
+.legend1a {
+    grid-area: 1 / 4 / span 1 / span 5; 
+}
+.legend2  {
+    grid-area: 2 / 1 / span 1 / span 3; 
+}
+.legend2a {
+    grid-area: 2 / 4 / span 1 / span 5;
+ }
+.legend3  {
+    grid-area: 3 / 1 / span 1 / span 3; 
+}
+.legend3a {
+    grid-area: 3 / 4 / span 1 / span 5; 
+}
+.legend4  {
+    grid-area: 1 / 9 / span 1 / span  3; 
+}
+.legend4a {
+    grid-area: 1 / 12 / span 1 / span 5; 
+}
+.legend5  {
+    grid-area: 2 / 9 / span 1 / span 3;
+ }
+.legend5a {
+    grid-area: 2 / 12 / span 1 / span 5; 
+}
+.legend6  {
+    grid-area: 3 / 9 / span 1 / span 3; 
+}
+.legend6a {
+    grid-area: 3 / 12 / span 1 / span 5; 
+}
+.legend7  {
+    grid-area: 1 / 17 / span 1 / span 3; 
+}
+.legend7a {
+    grid-area: 1 / 20 / span 1 / span 5; 
+}
+.legend8  {
+    grid-area: 2 / 17 / span 1 / span 3; 
+ }
+.legend8a {
+    grid-area: 2 / 20 / span 1 / span 5;
+}
+.legend9  {
+    grid-area: 3 / 17 / span 1 / span 3;
+} 
+.legend9a {
+    grid-area: 3 / 20 / span 1 / span 5;
+}
+          
+.element1  {
+    grid-area: 1 / 18 / span 2 / span 1; background-color:darkgray;
+     border:1px solid groove; margin: 2px 2px 2px 0;
+    }
+.element4  {
+    grid-area: 3 / 18 / span 2 / span 1; background-color:darkgray; 
+    border:1px solid groove; margin: 1px 2px 2px 0;
+}
+.element7  {
+    grid-area: 5 / 18 / span 2 / span 1; background-color:darkgray;
+     border:1px solid groove; margin: 1px 2px 2px 0
+     ;}
+.element10 {
+    grid-area: 7 / 18 / span 2 / span 1; background-color:darkgray;
+     border:1px solid groove; margin: 1px 2px 2px 0;
+    }
+.element13 {
+    grid-area: 9 / 18 / span 2 / span 1; background-color:darkgray; 
+    border:1px solid groove; margin: 1px 2px 3px 0;
+}
+
+.element2  {
+    grid-area: 1 / 19 / span 2 / span 1; background-color:wheat; 
+    border:1px solid groove; margin: 2px 2px 2px 0;
+}
+.element5  {
+    grid-area: 3 / 19 / span 2 / span 1; background-color:wheat; 
+    border:1px solid groove; margin: 1px 2px 2px 0;
+}
+.element8  {
+    grid-area: 5 / 19 / span 2 / span 1; background-color:wheat; 
+    border:1px solid groove; margin: 1px 2px 2px 0;
+}
+.element11 {
+    grid-area: 7 / 19 / span 2 / span 1; background-color:wheat; 
+    border:1px solid groove; margin: 1px 2px 2px 0;
+}
+.element14 {
+    grid-area: 9 / 19 / span 2 / span 1; background-color:wheat; 
+    border:1px solid groove; margin: 1px 2px 3px 0;
+}
+.element3  {
+    grid-area: 1 / 20 / span 2 / span 1; background-color:cadetblue; 
+    border:1px solid groove; margin: 2px 2px 2px 0;
+}
+.element6  {
+    grid-area: 3 / 20 / span 2 / span 1; background-color:cadetblue;
+    border:1px solid groove; margin: 1px 2px 2px 0;
+    }
+.element9  {
+    grid-area: 5 / 20 / span 2 / span 1; background-color:cadetblue;
+    border:1px solid groove; margin: 1px 2px 2px 0;
+    }
+.element12 {
+    grid-area: 7 / 20 / span 2 / span 1; background-color:cadetblue;
+    border:1px solid groove; margin: 1px 2px 2px 0;
+    }
+.element15 {
+    grid-area: 9 / 20 / span 2 / span 1; background-color:cadetblue; 
+    border:1px solid groove; margin: 1px 2px 3px 0;
+}
+
+.monitorLabel {
+    grid-area: 7 / 19 / span 4 / span 2; z-index: 1; margin: 0 2px 3px 0;
+    background-color:rgb(70, 109, 141); border:1px solid groove;
+    font-size: 1.7em; font-family: Gautami; color: rgb(0, 24, 41);
+    outline: none;
+}
+
+
+
