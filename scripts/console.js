@@ -123,16 +123,16 @@ function metrics() {
     monOneL2k.innerHTML         = grid.length;
 
     monTwo.innerHTML            = `GRID[${Math.floor(player1.x/GRID_WIDTH)}][${Math.floor(player1.y/GRID_HEIGHT)}]`;
-    monTwoScreenKey.innerHTML   = "Current Location";
-    monTwoL1.innerHTML          = `X Coord: ${player1.x}`;
-    monTwoL1k.innerHTML         = `Y Coord: ${player1.y}`;
+    monTwoScreenKey.innerHTML   = "Current Grid";
+    monTwoL1.innerHTML          = '';
+    monTwoL1k.innerHTML         = '';
     monTwoL2.innerHTML          = "";
     monTwoL2k.innerHTML         = "";
 
-    monThree.innerHTML          = mapModeEdit;
-    monThreeScreenKey.innerHTML = "In Edit Mode?";
-    monThreeL1.innerHTML             = "type: ";
-    monThreeL1k.innerHTML            = typeof(mapModeEdit);
+    monThree.innerHTML          = `X: ${player1.x}, Y: ${player1.y}`;
+    monThreeScreenKey.innerHTML = "Current in x, y";
+    // monThreeL1.innerHTML             = "type: ";
+    // monThreeL1k.innerHTML            = typeof(mapModeEdit);
     monThreeL2.innerHTML             = " ";
     monThreeL2k.innerHTML            = "";
 
@@ -157,8 +157,8 @@ function metrics() {
     // monSixL2.innerHTML          = "length: ";
     // monSixL2k.innerHTML         = entries.length;
 
-    monSeven.innerHTML          = eWhich;
-    monSevenScreenKey.innerHTML = "eWhich";
+    monSeven.innerHTML          = busy;
+    monSevenScreenKey.innerHTML = "busy t/f";
     // monSevenL1.innerHTML        = "type: ";
     // monSevenL1k.innerHTML       = typeof(result);
     // monSevenL2.innerHTML        = "length: ";
