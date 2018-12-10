@@ -34,20 +34,21 @@ upperCanvas.addEventListener('click', function(e){
   // LEFT-CLICK functions in Non-Edit Mode
   if(!mapModeEdit){
     // ensure destination not an obstacle
-    if(grid[gridX][gridY] == 'Obstacle'){return}
-    // ping animation
-    ping(xCoor, yCoor);
-    // update grid to reflect path   
-    grid[gridX][gridY] = 'Goal';
-    
-    // get player's [gridX][gridY] and pass them
-    // to findNewPath()
-    let startX = Math.floor(player1.x/GRID_WIDTH);
-    let startY = Math.floor(player1.y/GRID_HEIGHT);
-    findNewPath(startX, startY);
-    
-    // send player to destination
-    goBlockie();
+    if(grid[gridX][gridY] == 'Empty'){
+      // if player is already moving
+      if(busy){return};
+      // ping animation
+      ping(xCoor, yCoor);
+      // set goal
+      grid[gridX][gridY] = 'Goal';
+      // get player's [gridX][gridY] and pass them
+      // to findNewPath()
+      let startX = Math.floor(player1.x/GRID_WIDTH);
+      let startY = Math.floor(player1.y/GRID_HEIGHT);
+      player1.pathInstructions = findNewPath(startX, startY);
+      console.log(player1.pathInstructions);     
+      player1.moveToXY();
+    }    
   }
 })
 
@@ -88,6 +89,10 @@ document.addEventListener('click', function(e){
   if(e.target.value == 'getDefaultMap')
   {
     grid = JSON.parse(localStorage.getItem('defaultMap'));
+  }
+  if(e.target.value == 'clearMap')
+  {
+    map.clear();
   }
 });
 

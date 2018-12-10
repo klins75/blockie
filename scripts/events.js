@@ -45,11 +45,9 @@ upperCanvas.addEventListener('click', function(e){
       // to findNewPath()
       let startX = Math.floor(player1.x/GRID_WIDTH);
       let startY = Math.floor(player1.y/GRID_HEIGHT);
-      player1.pathInstructions = findNewPath(startX, startY);
-      console.log(player1.pathInstructions);     
+      player1.pathInstructions = findPath(startX, startY); 
       player1.moveToXY();
-    }
-    
+    }    
   }
 })
 
@@ -90,6 +88,10 @@ document.addEventListener('click', function(e){
   if(e.target.value == 'getDefaultMap')
   {
     grid = JSON.parse(localStorage.getItem('defaultMap'));
+  }
+  if(e.target.value == 'clearMap')
+  {
+    map.clear();
   }
 });
 

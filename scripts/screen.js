@@ -1,6 +1,7 @@
 window.onload = () => {
   requestID = requestAnimationFrame(drawAll);
-  // block1 = new Block(20, 0, 20, 20, 'orange'); 
+  // block1 = new Block(20, 0, 20, 20, 'orange');
+  grid = gridPrint; 
   map.load();
   // loadMap();
   // colorGrid();

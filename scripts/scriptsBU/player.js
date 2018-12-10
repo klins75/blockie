@@ -6,20 +6,22 @@ class Block {
 		this.height = height;
 		this.color = color;
 		this.vel = 5;
+		this.pathIndex = 0;
 		// draw instruction
 		this.draw = () => {
 			drawRectangle(this.x, this.y, this.width, this.height, this.color);
 		}
 		this.pathInstructions = [];
 		// updateSprite(this);
+
 		// follow path from pathInstructions
-		this.moveToXY = (timestamp, x, y) => {
+		this.moveToXY = () => {
 			requestID2 = requestAnimationFrame( () => {
-				this.moveToXY(timestamp, x, y)
+				this.moveToXY()
 			})
 			busy = true;
-			let toX = Number(x);
-			let toY = Number(y);
+			let toX = this.pathInstructions[this.pathIndex].x;
+			let toY = this.pathInstructions[this.pathIndex].y;
 			let distX = toX - this.x;
 			let distY = toY - this.y;
 			let resultant = Math.sqrt(Math.pow(distX, 2) + Math.pow(distY,2));
@@ -32,12 +34,12 @@ class Block {
 				if(distY > 0){this.y += Math.abs((distY)/resultant)*this.vel}
 				if(distY < 0){this.y -= Math.abs((distY)/resultant)*this.vel}
 			}
-			// console.log(`distX= ${distX}, distY= ${distY}`);
 			// look for next waypoint, if it exists
 			if((Math.abs(distX) < this.vel/2) && Math.abs(distY) < this.vel/2){
-				if(pathIndex < this.pathInstructions.length){
-					x = this.pathInstructions[pathIndex].x; y = this.pathInstructions[pathIndex].y;
-					pathIndex ++;
+				if(this.pathIndex < this.pathInstructions.length-1){
+					// toX = this.pathInstructions[this.pathIndex].x;
+					// toY = this.pathInstructions[this.pathIndex].y;
+					this.pathIndex ++;
 				} else {
 					// finished, reset 'busy' and 'i' and close animation
 					busy = false;
@@ -48,7 +50,7 @@ class Block {
 					grid[prevGoalX][prevGoalY]='Empty';
 					this.pathInstructions.length = 0;
 					window.cancelAnimationFrame(requestID2);
-					pathIndex = 0;
+					this.pathIndex = 0;
 					
 				}  
 			}
@@ -67,7 +69,7 @@ class Player extends Block {
 		}
 	}
 }
-let player1 = new Player(0, 0, 20, 20, spriteSheet, 0, 0,); 	
+let player1 = new Player(20, 20, 20, 20, spriteSheet, 0, 0,); 	
 	
 	
 	

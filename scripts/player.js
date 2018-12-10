@@ -69,7 +69,7 @@ class Player extends Block {
 		}
 	}
 }
-let player1 = new Player(0, 0, 20, 20, spriteSheet, 0, 0,); 	
+let player1 = new Player(20, 20, 20, 20, spriteSheet, 0, 0,); 	
 	
 	
 	

@@ -35,7 +35,7 @@ const GRID_ROWS = 30;
 let obstacles = [];
 
 // global counter (cheesy workaround)
-let pathIndex = 0;
+// let pathIndex = 0;
 // path instructions
 // let pathInstructions = []; 
 

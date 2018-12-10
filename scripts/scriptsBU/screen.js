@@ -1,6 +1,7 @@
 window.onload = () => {
   requestID = requestAnimationFrame(drawAll);
-  // block1 = new Block(20, 0, 20, 20, 'orange'); 
+  // block1 = new Block(20, 0, 20, 20, 'orange');
+  grid = gridPrint; 
   map.load();
   // loadMap();
   // colorGrid();
@@ -90,18 +91,6 @@ const drawRectangle = (x, y, width, height, color) => {
   ctx.restore();  
 }
  
-  function goBlockie(){
-  if(busy){
-    /*window.cancelAnimationFrame(requestID2)*/
-    return
-  }
-  let a = 0;
-  let b = 0;
-  let x = player1.pathInstructions[a].x;
-  let y = player1.pathInstructions[b].y;
-    let z = 0;
-    player1.moveToXY(z, x, y);
-};
 
 
   

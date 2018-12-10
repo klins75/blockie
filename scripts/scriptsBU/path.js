@@ -125,11 +125,13 @@ var exploreInDirection = function(currentLocation, direction, grid) {
 let newPath; // move this or kill it
 
 // console.log(newPath);
-let pathInstructionsXCoor = 0;
-let pathInstructionsYCoor = 0;
+let pathInstructionsXCoor = player1.x;
+let pathInstructionsYCoor = player1.y;
+let pathResult = [];
 
 function findNewPath(startX, startY){
   newPath = findShortestPath([startX, startY], grid);
+
   if(!newPath){
     console.log('path failed');
     return false;
@@ -138,22 +140,22 @@ function findNewPath(startX, startY){
     newPath.forEach(function(square) {    
       if(square == "East"){
         pathInstructionsXCoor += 20;
-        player1.pathInstructions.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
+        pathResult.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
       }
       if(square == "West"){
         pathInstructionsXCoor -= 20;
-        player1.pathInstructions.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
+        pathResult.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
       }
       if(square == "North"){
         pathInstructionsYCoor -= 20;
-        player1.pathInstructions.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
+        pathResult.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
       }
       if(square == "South"){
         pathInstructionsYCoor += 20;
-        player1.pathInstructions.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
+        pathResult.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
       }
     });
-    
+    return pathResult;
   }
   
 }

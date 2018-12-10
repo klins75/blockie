@@ -16,10 +16,12 @@ let map = {
       for(let j=0; j < GRID_ROWS; j++) {
 				// edit mode wall-making
   			if(mapModeEdit && mouseDown){
-    			if(eWhich == 1)
-    			grid[mouseMoveCoorX][mouseMoveCoorY]="Obstacle";
-  			} if(eWhich == 3){
-    		grid[mouseMoveCoorX][mouseMoveCoorY]="Empty";
+    			if(eWhich == 1){
+						grid[mouseMoveCoorX][mouseMoveCoorY]="Obstacle";
+					}
+					if(eWhich == 3){
+    				grid[mouseMoveCoorX][mouseMoveCoorY]="Empty";
+					}
 				} // --------------------
 				if(grid[i][j] =='Obstacle'){
           drawRectangle([i]*GRID_WIDTH, [j]*GRID_HEIGHT, GRID_WIDTH-GRID_GAP, GRID_HEIGHT-GRID_GAP, 'darkslategray');
@@ -29,7 +31,16 @@ let map = {
         
       }      
     }
-  }
+	},
+	clear : function() {
+		// change this to a .forEach
+    for (let i=0; i<GRID_COLS; i++) {
+      grid[i] = (grid[i] || []);
+      for (let j=0; j<GRID_ROWS; j++) {
+        grid[i][j] = 'Empty'
+      }
+    }
+	}
 }
 
 
@@ -92,99 +103,102 @@ class Component {
 }
 
 let gridPrint = [
-["Empty", "Empty", "Empty", "Empty", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
 
-["Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
 
-["Empty", "Empty", "Obstacle", "Obstacle", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Obstacle", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Obstacle", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Obstacle", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle"],
 
-["Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Obstacle", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Obstacle", "Obstacle"],
 
-["Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle"],
 
-["Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Obstacle", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Obstacle", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Obstacle", "Obstacle", "Empty", "Obstacle", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Empty", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"],
+	["Obstacle", "Empty", "Obstacle", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
 
-["Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty"]
+	["Obstacle", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Empty", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+	["Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"]
+
+
 ];
