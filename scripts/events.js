@@ -59,7 +59,15 @@ upperCanvas.addEventListener('click', function(e){
       // to findNewPath()
       let startX = Math.floor(player1.x/GRID_WIDTH);
       let startY = Math.floor(player1.y/GRID_HEIGHT);
-      player1.pathInstructions = findPath(startX, startY); 
+      let path = findPath(startX, startY);
+      if(!path){
+        grid[gridX][gridY] = 'Empty';
+        map.load();
+        return
+      }
+      player1.pathInstructions = path;
+      // player1.pathInstructions = findPath(startX, startY);
+
       player1.moveToXY();
     }    
   }
