@@ -6,22 +6,20 @@ class Block {
 		this.height = height;
 		this.color = color;
 		this.vel = 5;
-		this.pathIndex = 0;
 		// draw instruction
 		this.draw = () => {
 			drawRectangle(this.x, this.y, this.width, this.height, this.color);
 		}
 		this.pathInstructions = [];
 		// updateSprite(this);
-
 		// follow path from pathInstructions
-		this.moveToXY = () => {
+		this.moveToXY = (timestamp, x, y) => {
 			requestID2 = requestAnimationFrame( () => {
-				this.moveToXY()
+				this.moveToXY(timestamp, x, y)
 			})
 			busy = true;
-			let toX = this.pathInstructions[this.pathIndex].x;
-			let toY = this.pathInstructions[this.pathIndex].y;
+			let toX = Number(x);
+			let toY = Number(y);
 			let distX = toX - this.x;
 			let distY = toY - this.y;
 			let resultant = Math.sqrt(Math.pow(distX, 2) + Math.pow(distY,2));
@@ -34,12 +32,12 @@ class Block {
 				if(distY > 0){this.y += Math.abs((distY)/resultant)*this.vel}
 				if(distY < 0){this.y -= Math.abs((distY)/resultant)*this.vel}
 			}
+			// console.log(`distX= ${distX}, distY= ${distY}`);
 			// look for next waypoint, if it exists
 			if((Math.abs(distX) < this.vel/2) && Math.abs(distY) < this.vel/2){
-				if(this.pathIndex < this.pathInstructions.length-1){
-					// toX = this.pathInstructions[this.pathIndex].x;
-					// toY = this.pathInstructions[this.pathIndex].y;
-					this.pathIndex ++;
+				if(pathIndex < this.pathInstructions.length){
+					x = this.pathInstructions[pathIndex].x; y = this.pathInstructions[pathIndex].y;
+					pathIndex ++;
 				} else {
 					// finished, reset 'busy' and 'i' and close animation
 					busy = false;
@@ -50,7 +48,7 @@ class Block {
 					grid[prevGoalX][prevGoalY]='Empty';
 					this.pathInstructions.length = 0;
 					window.cancelAnimationFrame(requestID2);
-					this.pathIndex = 0;
+					pathIndex = 0;
 					
 				}  
 			}

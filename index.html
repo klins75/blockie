@@ -21,8 +21,12 @@
       </div>
       <div id="underScreen">
           <button value='editButton'>TOGGLE EDIT</button>
-          <button value='submitMap'>SUBMIT MAP</button>
-          <button value='getMap'>GET MAP?</button>
+          <button value='submitMap'>SUBMIT CUSTOM MAP</button>
+          <button value='getMap'>GET CUSTOM MAP</button>
+          <button value='submitDefaultMap'style='background-color:darkred;color:white'>SUBMIT DEFAULT MAP</button>
+          <button value='getDefaultMap'>GET DEFAULT MAP</button>
+          <!-- <br><button value='dbButton'>db??</button> -->
+          <div style='display:none'><image src='images/spritesheet.png'id='spriteSheet'></image></div>
           <p id='instructionP'>Click on map to give Blockie a destination. Allow him to reach his goal.<br>
             To add walls, click 'toggle edit mode', and click/drag along map'. Then toggle back and send<br>
             him on his way.
@@ -1045,11 +1049,12 @@
     </div>      
   </div>
   
-
-
+    <script src='scripts/inital.js'></script>
+    <script src='scripts/events.js'></script>
+    <script src='scripts/player.js'></script>
     <script src='scripts/path.js'></script>
-  <script src='scripts/console.js'></script>
-  <script src='scripts/map.js'></script>
-  <script src='scripts/screen.js'></script>
+    <script src='scripts/console.js'></script>
+    <script src='scripts/map.js'></script>
+    <script src='scripts/screen.js'></script>
 </body>
 </html>

@@ -90,6 +90,18 @@ const drawRectangle = (x, y, width, height, color) => {
   ctx.restore();  
 }
  
+  function goBlockie(){
+  if(busy){
+    /*window.cancelAnimationFrame(requestID2)*/
+    return
+  }
+  let a = 0;
+  let b = 0;
+  let x = player1.pathInstructions[a].x;
+  let y = player1.pathInstructions[b].y;
+    let z = 0;
+    player1.moveToXY(z, x, y);
+};
 
 
   

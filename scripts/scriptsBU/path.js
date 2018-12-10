@@ -127,7 +127,6 @@ let newPath; // move this or kill it
 // console.log(newPath);
 let pathInstructionsXCoor = 0;
 let pathInstructionsYCoor = 0;
-let pathResult = [];
 
 function findNewPath(startX, startY){
   newPath = findShortestPath([startX, startY], grid);
@@ -139,22 +138,22 @@ function findNewPath(startX, startY){
     newPath.forEach(function(square) {    
       if(square == "East"){
         pathInstructionsXCoor += 20;
-        pathResult.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
+        player1.pathInstructions.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
       }
       if(square == "West"){
         pathInstructionsXCoor -= 20;
-        pathResult.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
+        player1.pathInstructions.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
       }
       if(square == "North"){
         pathInstructionsYCoor -= 20;
-        pathResult.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
+        player1.pathInstructions.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
       }
       if(square == "South"){
         pathInstructionsYCoor += 20;
-        pathResult.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
+        player1.pathInstructions.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
       }
     });
-    return pathResult;
+    
   }
   
 }
