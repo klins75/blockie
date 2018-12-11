@@ -136,7 +136,7 @@ function metrics() {
     monThreeL2.innerHTML             = " ";
     monThreeL2k.innerHTML            = "";
 
-    // monFour.innerHTML           = ``;
+    monFour.innerHTML           = player1.direction;
     // monFourScreenKey.innerHTML  = "numberEntry().name";
     // monFourL1.innerHTML         = "type: ";
     // monFourL1k.innerHTML        = typeof(numberEntry);

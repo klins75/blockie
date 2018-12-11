@@ -47,7 +47,7 @@ class Block {
 					let prevGoalY = Math.floor(this.y/GRID_HEIGHT);
 					map.load();
 					
-					grid[prevGoalX][prevGoalY]='Empty';
+					grid[prevGoalX][prevGoalY]='Safe';
 					this.pathInstructions.length = 0;
 					window.cancelAnimationFrame(requestID2);
 					this.pathIndex = 0;
@@ -55,7 +55,27 @@ class Block {
 				}  
 			}
 		}
+		
 	}
+	get direction(){
+		if(this.pathIndex > 0){
+				if((this.pathInstructions[this.pathIndex].x - this.pathInstructions[this.pathIndex -1].x) < 0){
+				return 'West'
+			}
+			if((this.pathInstructions[this.pathIndex].x - this.pathInstructions[this.pathIndex -1].x) > 0){
+				return 'East'
+			}
+			if((this.pathInstructions[this.pathIndex].y - this.pathInstructions[this.pathIndex -1].y) > 0){
+				return 'South'
+			}
+			if((this.pathInstructions[this.pathIndex].y - this.pathInstructions[this.pathIndex -1].y) < 0){
+				return 'North'
+			}
+		}
+		else {
+			return 'East'
+		}
+	};
 } // end class declaration
 
 class Player extends Block {
@@ -69,7 +89,7 @@ class Player extends Block {
 		}
 	}
 }
-let player1 = new Player(20, 20, 20, 20, spriteSheet, 0, 0,); 	
+let player1 = new Player(44*GRID_WIDTH, 21*GRID_HEIGHT, 20, 20, spriteSheet, 0, 0,); 	
 	
 	
 	

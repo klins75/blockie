@@ -34,9 +34,22 @@ upperCanvas.addEventListener('click', function(e){
   // LEFT-CLICK functions in Non-Edit Mode
   if(!mapModeEdit){
     // ensure destination not an obstacle
-    if(grid[gridX][gridY] == 'Empty'){
+    if(grid[gridX][gridY] != 'Obstacle'){
       // if player is already moving
-      if(busy){return};
+      if(busy){
+        let currentInst = player1.pathInstructions[player1.pathIndex];  
+        busy = false;
+        let prevGoalX = Math.floor(player1.x/GRID_WIDTH);
+        let prevGoalY = Math.floor(player1.y/GRID_HEIGHT);
+        map.load();					
+        grid[prevGoalX][prevGoalY]='Empty';
+        player1.pathInstructions.length = 0;
+        player1.pathIndex = 0;
+        window.cancelAnimationFrame(requestID2);
+        player1.pathInstructions.push(currentInst);
+        player1.moveToXY();
+        return;
+      }
       // ping animation
       ping(xCoor, yCoor);
       // set goal
@@ -45,8 +58,15 @@ upperCanvas.addEventListener('click', function(e){
       // to findNewPath()
       let startX = Math.floor(player1.x/GRID_WIDTH);
       let startY = Math.floor(player1.y/GRID_HEIGHT);
-      player1.pathInstructions = findNewPath(startX, startY);
-      console.log(player1.pathInstructions);     
+      let path = findPath(startX, startY);
+      if(!path){
+        grid[gridX][gridY] = 'Empty';
+        map.load();
+        return
+      }
+      player1.pathInstructions = path;
+      // player1.pathInstructions = findPath(startX, startY);
+
       player1.moveToXY();
     }    
   }
@@ -70,30 +90,41 @@ document.addEventListener('click', function(e){
       map.load();
     }
   }
-  if(e.target.value == 'submitMap')
-  {
-    if(confirm("Are you sure (previous map will be overwritten)")){
-      localStorage.setItem('grid', JSON.stringify(grid));
-    }
+  switch(e.target.value) {
+    case 'submitMap':
+      if(confirm("Previous map will be overwritten")) {
+        localStorage.setItem('grid'), JSON.stringify(grid);
+      }
+      break;
+    case 'getMap':
+      grid = JSON.parse(localStorage.getItem('grid'));
+      break;
+    case 'submitDefaultMap':
+      if(confirm("Are you sure (default map will be overwritten)")){
+        localStorage.setItem('defaultMap', JSON.stringify(grid));
+      }
+      break;
+    case 'getDefaultMap':
+      grid = JSON.parse(localStorage.getItem('defaultMap'));
+      break;
+    case 'clearMap':
+      map.clear();
+      break;
+    case 'pause':
+      let currentInst = player1.pathInstructions[player1.pathIndex];    
+      busy = false;
+      let prevGoalX = Math.floor(player1.x/GRID_WIDTH);
+      let prevGoalY = Math.floor(player1.y/GRID_HEIGHT);
+      map.load();					
+      grid[prevGoalX][prevGoalY]='Empty';
+      player1.pathInstructions.length = 0;
+      player1.pathIndex = 0;
+      window.cancelAnimationFrame(requestID2);
+      player1.pathInstructions.push(currentInst);
+      player1.moveToXY();
+      
   }
-  if(e.target.value == 'getMap')
-  {
-    grid = JSON.parse(localStorage.getItem('grid'));
-  }
-  if(e.target.value == 'submitDefaultMap')
-  {
-    if(confirm("Are you sure (default map will be overwritten)")){
-      localStorage.setItem('defaultMap', JSON.stringify(grid));
-    }
-  }
-  if(e.target.value == 'getDefaultMap')
-  {
-    grid = JSON.parse(localStorage.getItem('defaultMap'));
-  }
-  if(e.target.value == 'clearMap')
-  {
-    map.clear();
-  }
+
 });
 
 

@@ -64,7 +64,7 @@ html, body {
 
 
 #canvas {
-  position:absolute;
+  position:absolute; background-image: url('../images/rpgBackground.jpg');
 }
 #canvasUpper {
   position:absolute; background-color:rgba(255, 192, 203, 0);

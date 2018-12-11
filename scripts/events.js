@@ -42,13 +42,12 @@ upperCanvas.addEventListener('click', function(e){
         let prevGoalX = Math.floor(player1.x/GRID_WIDTH);
         let prevGoalY = Math.floor(player1.y/GRID_HEIGHT);
         map.load();					
-        grid[prevGoalX][prevGoalY]='Empty';
+        grid[prevGoalX][prevGoalY]='Safe';
         player1.pathInstructions.length = 0;
         player1.pathIndex = 0;
         window.cancelAnimationFrame(requestID2);
         player1.pathInstructions.push(currentInst);
         player1.moveToXY();
-        console.log('busy event fired');
         return;
       }
       // ping animation
@@ -61,7 +60,7 @@ upperCanvas.addEventListener('click', function(e){
       let startY = Math.floor(player1.y/GRID_HEIGHT);
       let path = findPath(startX, startY);
       if(!path){
-        grid[gridX][gridY] = 'Empty';
+        grid[gridX][gridY] = 'Safe';
         map.load();
         return
       }
@@ -84,17 +83,19 @@ document.addEventListener('click', function(e){
     if(!mapModeEdit){
       mapModeEdit = true;
       GRID_GAP = 1;
+      map.obstacleColor = 'rgba(80, 80, 80, .6)';
       map.load();
     } else if(mapModeEdit){
       mapModeEdit = false;
       GRID_GAP = 0;
+      map.obstacleColor = 'rgba(0, 0, 0, 0)';
       map.load();
     }
   }
   switch(e.target.value) {
     case 'submitMap':
       if(confirm("Previous map will be overwritten")) {
-        localStorage.setItem('grid'), JSON.stringify(grid);
+        localStorage.setItem('grid', JSON.stringify(grid));
       }
       break;
     case 'getMap':
@@ -117,7 +118,7 @@ document.addEventListener('click', function(e){
       let prevGoalX = Math.floor(player1.x/GRID_WIDTH);
       let prevGoalY = Math.floor(player1.y/GRID_HEIGHT);
       map.load();					
-      grid[prevGoalX][prevGoalY]='Empty';
+      grid[prevGoalX][prevGoalY]='Safe';
       player1.pathInstructions.length = 0;
       player1.pathIndex = 0;
       window.cancelAnimationFrame(requestID2);

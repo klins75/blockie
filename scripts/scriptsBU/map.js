@@ -6,7 +6,7 @@ let map = {
     for (let i=0; i<GRID_COLS; i++) {
       grid[i] = (grid[i] || []);
       for (let j=0; j<GRID_ROWS; j++) {
-        if(grid[i][j]=='Obstacle'){console.log(`${grid[i][j]}`)}
+        if(grid[i][j]=='Obstacle'){}
         else{grid[i][j] = 'Empty'}
       }
     }

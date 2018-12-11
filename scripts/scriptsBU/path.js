@@ -11,9 +11,11 @@ var findShortestPath = function(startCoordinates, grid) {
     path: [],
     status: 'Start'
   };
+  
 
   // Initialize the queue with the start location already inside
   var queue = [location];
+
 
   // Loop through the grid searching for the goal
   while (queue.length > 0) {
@@ -51,8 +53,9 @@ var findShortestPath = function(startCoordinates, grid) {
     } else if (newLocation.status === 'Valid') {
       queue.push(newLocation);
     }
+    
   }
-
+  ;
   // No valid path found
   return false;
 
@@ -120,17 +123,12 @@ var exploreInDirection = function(currentLocation, direction, grid) {
   return newLocation;
 };
 
+function findPath(startX, startY){
 
-
-let newPath; // move this or kill it
-
-// console.log(newPath);
-let pathInstructionsXCoor = player1.x;
-let pathInstructionsYCoor = player1.y;
-let pathResult = [];
-
-function findNewPath(startX, startY){
   newPath = findShortestPath([startX, startY], grid);
+  pathResult = [];
+  let xCoor = player1.x;
+  let yCoor = player1.y;
 
   if(!newPath){
     console.log('path failed');
@@ -139,20 +137,20 @@ function findNewPath(startX, startY){
   else{
     newPath.forEach(function(square) {    
       if(square == "East"){
-        pathInstructionsXCoor += 20;
-        pathResult.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
+        xCoor += 20;
+        pathResult.push({x:xCoor, y:yCoor});
       }
       if(square == "West"){
-        pathInstructionsXCoor -= 20;
-        pathResult.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
+        xCoor -= 20;
+        pathResult.push({x:xCoor,y:yCoor});
       }
       if(square == "North"){
-        pathInstructionsYCoor -= 20;
-        pathResult.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
+        yCoor -= 20;
+        pathResult.push({x:xCoor,y:yCoor});
       }
       if(square == "South"){
-        pathInstructionsYCoor += 20;
-        pathResult.push({x:pathInstructionsXCoor,y:pathInstructionsYCoor});
+        yCoor += 20;
+        pathResult.push({x:xCoor,y:yCoor});
       }
     });
     return pathResult;

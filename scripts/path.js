@@ -79,7 +79,7 @@ var locationStatus = function(location, grid) {
     return 'Invalid';
   } else if (grid[dfl][dft] === 'Goal') {
     return 'Goal';
-  } else if (grid[dfl][dft] !== 'Empty') {
+  } else if (grid[dfl][dft] !== 'Safe') {
     // location is either an obstacle or has been visited
     return 'Blocked';
   } else {
