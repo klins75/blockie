@@ -48,7 +48,7 @@ let map = {
 
 
 
-let gridPrint = [
+let gridPrint2 = [
 
 	["Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
 
@@ -148,3 +148,103 @@ let gridPrint = [
 
 
 ];
+
+
+let gridPrint = [
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Safe", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Safe", "Safe"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Safe", "Obstacle", "Safe"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Safe"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Safe", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Safe", "Obstacle", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Safe", "Safe", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+["Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Safe", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle", "Obstacle"],
+
+]

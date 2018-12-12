@@ -15,7 +15,6 @@ window.onload = () => {
 // draw function for the canvas
 function drawAll(){
   requestID = requestAnimationFrame(drawAll);
-  console.log('drawall called');
   // clear previous
   ctxU.clearRect(0, 0, upperCanvas.width, upperCanvas.height);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
