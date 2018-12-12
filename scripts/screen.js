@@ -6,7 +6,7 @@ window.onload = () => {
   // loadMap();
   // colorGrid();
   map.update();
-  startConsole();
+  // startConsole();
   spriteSheet = new Image();
   spriteSheet.src = 'images/spriteSheet2.png';
   spriteSheet.onload = drawAll;
