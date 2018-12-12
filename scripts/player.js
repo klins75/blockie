@@ -85,12 +85,48 @@ class Player extends Block {
 		this.frameY = frameY;
 		this.image = image;
 		this.draw = function(){
+			if(this.pathIndex > 0) {
+				if(this.direction == 'East'){
+				this.frameY = 0;
+				takeStep(this);
+				}
+				if(this.direction == 'West'){
+					this.frameY = 100;
+					takeStep(this);
+				}
+				if(this.direction == 'South'){
+					this.frameY = 200;
+					takeStep(this);
+				}
+				if(this.direction == 'North'){
+					this.frameY = 300;
+					takeStep(this);
+				}
+			}
+			
 			ctx.drawImage(spriteSheet, this.frameX, this.frameY, this.width, this.height, this.x, this.y, 20, 20);
+			
 		}
+		
 	}
 }
-let player1 = new Player(44*GRID_WIDTH, 21*GRID_HEIGHT, 20, 20, spriteSheet, 0, 0,); 	
-	
+let player1 = new Player(44*GRID_WIDTH, 21*GRID_HEIGHT, 100, 100, spriteSheet, 0, 0,); 	
+let count = 0;
+function takeStep(e){
+	if(e.frameX < 1500){
+		if(count%1==0){
+			e.frameX += 100;
+		}			
+	} else{
+		console.log(e.frameX);
+		e.frameX = 0;
+		count = 0;
+		console.log('leaving function');
+		
+		return;			
+	} console.log(count);
+	count += 2;	
+}
 	
 	
 	

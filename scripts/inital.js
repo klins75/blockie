@@ -16,7 +16,8 @@ let display = false;
 const upperCanvas = document.getElementById('canvasUpper');
 const ctxU = upperCanvas.getContext('2d');
 
-let spriteSheet = document.getElementById('spriteSheet');
+// let spriteSheet = document.getElementById('spriteSheet');
+let spriteSheet;
 // request for a separate animation frame (cheesy workaround)
 let requestID2;
 // mapMode: normal(false) or edit(true)

@@ -1,5 +1,5 @@
 window.onload = () => {
-  requestID = requestAnimationFrame(drawAll);
+  // requestID = requestAnimationFrame(drawAll);
   // block1 = new Block(20, 0, 20, 20, 'orange');
   grid = gridPrint; 
   map.load();
@@ -7,16 +7,21 @@ window.onload = () => {
   // colorGrid();
   map.update();
   startConsole();
+  spriteSheet = new Image();
+  spriteSheet.src = 'images/spriteSheet2.png';
+  spriteSheet.onload = drawAll;
 }
   
 // draw function for the canvas
 function drawAll(){
   requestID = requestAnimationFrame(drawAll);
+  console.log('drawall called');
   // clear previous
   ctxU.clearRect(0, 0, upperCanvas.width, upperCanvas.height);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   // update map
   map.update();
+
 
   if(!mapModeEdit){
     if(display){display.draw()};
