@@ -33,6 +33,7 @@ function drawAll(){
   function displayMessage(text, duration){
     // displays on upper canvas
     display = new Message(text, duration);
+    display.count();
     // display.text = text;
     setTimeout(function(){
       display = false
@@ -43,16 +44,72 @@ function drawAll(){
     constructor(text, duration) {
       this.text = text;
       this.duration = duration;
+      this.count = () => {
+        console.log(text.length);
+      }
       this.draw = () => {
         ctx.restore();
+        drawRectangle(40,215,this.text.length*1.8*(canvas.width/100), 25, 'black');
         ctx.fillStyle = 'white';
-        ctx.font = '25px Monospace';
+        ctx.font = '2.2rem Monospace';
         ctx.fillText(text, 40, 240);
         ctx.fill();
         // ctxU.restore();
       }
     }
   }
+
+  function displayCaption(text, duration) {
+    // displays on upper canvas
+    display = new Caption(text, duration);
+    setTimeout(() => {
+      display = false
+    }, duration*1000);
+  }
+
+  class Caption {
+    constructor(text, duration) {
+      this.text = text;
+      this.duration = duration;
+      this.count = () => {
+        console.log(text.length);
+      }
+      this.draw = () => {
+        let captionX = ()=> {
+          if(player1.x<120){
+            return player1.x + player1.width
+          }
+          if(player1.x>=120){
+            return player1.x -this.text.length*1.2*(canvas.width/100)
+          }
+        }
+        let captionY = ()=> {
+          if(player1.y<=40){
+            return player1.y + GRID_HEIGHT
+          }
+          if(player1.y>40){
+            return player1.y - GRID_HEIGHT -6
+          }
+        }
+        let textY = ()=> {
+          if(player1.y<canvas.height/2){
+            return player1.y + player1.height + canvas.height/100
+          }
+          if(player1.y>canvas.height/2){
+            return player1.y - 6
+          }
+        }
+        ctx.restore();
+        drawRectangle(captionX(),captionY(),this.text.length*1.5*(canvas.width/100), 25, 'rgba(0,0,0,.4');
+        ctx.fillStyle = 'white';
+        ctx.font = '2rem Monospace';
+        ctx.fillText(text, captionX()+6, textY());
+        ctx.fill();
+        // ctxU.restore();
+      }
+    }
+  }
+
 // ANIMATIONS
   function ping(x, y) {
     displayPing = new Ping(x,y);

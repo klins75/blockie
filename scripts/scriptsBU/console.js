@@ -191,3 +191,1019 @@ function metrics() {
 setTimeout(function(){
     metrics();
   }, 1000);
+
+  
+  <div id="col2">
+  <div id="myConsole">
+    <!-- the console -->
+    <div class = "console1">
+        <div class = "row" id = "row1">   
+        
+            <div class = "module module1">
+            
+                <div class = "monitor monitor1">
+
+                    <div class = "screen">
+                        
+                        <div class = "screenKey">
+                            <div class= "screenKeyUpper">
+                                <!-- little gray label in white area-->
+                            </div>
+                            
+                            <div class = "screenKeyLower">
+                                <!-- white screen small area to the left -->
+                            </div>
+                        </div>
+
+                        <div class = "screenValue">
+                            <!-- white screen large area to the right -->
+                        </div>
+
+                    </div>
+                    
+                    <div class = "legend"> <!-- little green screen -->
+                        <div class =  "legend1 legendKey">
+                            
+                        </div>
+                        <div class = "legend1a legendValue">
+                            
+                        </div>
+                        <div class =  "legend2 legendKey">
+                            
+                        </div>
+                        <div class = "legend2a legendValue">
+                            
+                        </div>
+                        <div class =  "legend3 legendKey">
+                            
+                        </div>
+                        <div class = "legend3a legendValue">
+                            
+                        </div>
+                        <div class =  "legend4 legendKey">
+                            
+                        </div>
+                        <div class = "legend4a legendValue">
+                            
+                        </div>
+                        <div class =  "legend5 legendKey">
+                            
+                        </div>
+                        <div class = "legend5a legendValue">
+                            
+                        </div>
+                        <div class =  "legend6 legendKey">
+                            
+                        </div>
+                        <div class = "legend6a legendValue">
+                            
+                        </div>
+                        <div class =  "legend7 legendKey">
+                            
+                        </div>
+                        <div class = "legend7a legendValue">
+                            
+                        </div>
+                        <div class =  "legend8 legendKey">
+                            
+                        </div>
+                        <div class = "legend8a legendValue">
+                            
+                        </div>
+                        <div class =  "legend9 legendKey">
+                            
+                        </div>
+                        <div class = "legend9a legendValue">
+                            
+                        </div>
+                    </div>
+                    
+                    <button class = "element1" type="number" value="1">1</button>
+                    <button class = "element2" type="number" value="2">2</button>
+                    <button class = "element3" type="number" value="3">3</button>
+                    <button class = "element4" type="number" value="4">4</button>
+                    <button class = "element5" type="number" value="5">5</button>
+                    <button class = "element6" type="number" value="6">6</button>
+                    <button class = "element7" type="number" value="7">7</button>
+                    <button class = "element8" type="number" value="8">8</button>
+                    <button class = "element9" type="number" value="9">9</button>
+                    <button class = "element10" type="number" value="0">0</button>
+                    <button class = "element11" type="number" value="10">A</button> <!-- INVISIBLE -->
+                    <button class = "element12" type="number" value="11">B</button> <!-- INVISIBLE -->
+                    <button class = "element13" type="number" value="12">?</button>
+                    <button class = "element14" type="number" value="13">D</button> <!-- INVISIBLE -->
+                    <button class = "element15" type="number" value="14">E</button> <!-- INVISIBLE -->
+
+                    <button class="monitorLabel" type="number" value="1">1</button>
+                            
+                </div>
+                
+                <div class = "label"></div>
+            </div>
+            
+            <div class = "module module6">
+                <div class = "monitor monitor6">
+                    <div class = "screen">
+                        <div class = "screenKey">
+                                <div class= "screenKeyUpper">
+                                    
+                                </div>
+                                    
+                                <div class = "screenKeyLower"></div>
+                            </div>
+        
+                            <div class = "screenValue">
+                                
+                            </div>
+                    </div>
+                        
+                    <div class = "legend">
+                        <div class =  "legend1 legendKey">
+                            
+                        </div>
+                        <div class = "legend1a legendValue">
+                            
+                        </div>
+                        <div class =  "legend2 legendKey">
+                            
+                        </div>
+                        <div class = "legend2a legendValue">
+                            
+                        </div>
+                        <div class =  "legend3 legendKey">
+                            
+                        </div>
+                        <div class = "legend3a legendValue">
+                            
+                        </div>
+                        <div class =  "legend4 legendKey">
+                            
+                        </div>
+                        <div class = "legend4a legendValue">
+                            
+                        </div>
+                        <div class =  "legend5 legendKey">
+                            
+                        </div>
+                        <div class = "legend5a legendValue">
+                            
+                        </div>
+                        <div class =  "legend6 legendKey">
+                            
+                        </div>
+                        <div class = "legend6a legendValue">
+                            
+                        </div>
+                        <div class =  "legend7 legendKey">
+                            
+                        </div>
+                        <div class = "legend7a legendValue">
+                            
+                        </div>
+                        <div class =  "legend8 legendKey">
+                            
+                        </div>
+                        <div class = "legend8a legendValue">
+                            
+                        </div>
+                        <div class =  "legend9 legendKey">
+                            
+                        </div>
+                        <div class = "legend9a legendValue">
+                            
+                        </div>
+                    </div>
+                    
+                    <button class = "element1" type="number" value="6"></button>
+                    <button class = "element2" type="number" value="6"></button>
+                    <button class = "element3" type="number" value="6"></button>
+                    <button class = "element4" type="number" value="6"></button>
+                    <button class = "element5" type="number" value="6"></button>
+                    <button class = "element6" type="number" value="6"></button>
+                    <button class = "element7" type="number" value="6"></button>
+                    <button class = "element8" type="number" value="6"></button>
+                    <button class = "element9" type="number" value="6"></button>
+                    <button class = "element10" type="number" value="6"></button>
+                    <button class = "element11" type="number" value="6"></button>
+                    <button class = "element12" type="number" value="6"></button>
+                    <button class = "element13" type="number" value="6"></button>
+                    <button class = "element14" type="number" value="6"></button>
+                    <button class = "element15" type="number" value="6"></button>
+
+                    <button class="monitorLabel" type="number" value="6">6</button>
+                </div>
+                <div class = "label">
+
+                </div>
+            </div>
+            
+        </div>
+        <div class = "row" id = "row2">   
+        
+            <div class = "module module2">
+            
+                <div class = "monitor monitor2">
+
+                    <div class = "screen">
+                        
+                        <div class = "screenKey">
+                            <div class= "screenKeyUpper">
+                                
+                            </div>
+                                
+                            <div class = "screenKeyLower"></div>
+                        </div>
+
+                        <div class = "screenValue">
+                            
+                        </div>
+
+                    </div>
+                    
+                    <div class = "legend">
+                        <div class =  "legend1 legendKey">
+                            
+                        </div>
+                        <div class = "legend1a legendValue">
+                            
+                        </div>
+                        <div class =  "legend2 legendKey">
+                            
+                        </div>
+                        <div class = "legend2a legendValue">
+                            
+                        </div>
+                        <div class =  "legend3 legendKey">
+                            
+                        </div>
+                        <div class = "legend3a legendValue">
+                            
+                        </div>
+                        <div class =  "legend4 legendKey">
+                            
+                        </div>
+                        <div class = "legend4a legendValue">
+                            
+                        </div>
+                        <div class =  "legend5 legendKey">
+                            
+                        </div>
+                        <div class = "legend5a legendValue">
+                            
+                        </div>
+                        <div class =  "legend6 legendKey">
+                            
+                        </div>
+                        <div class = "legend6a legendValue">
+                            
+                        </div>
+                        <div class =  "legend7 legendKey">
+                            
+                        </div>
+                        <div class = "legend7a legendValue">
+                            
+                        </div>
+                        <div class =  "legend8 legendKey">
+                            
+                        </div>
+                        <div class = "legend8a legendValue">
+                            
+                        </div>
+                        <div class =  "legend9 legendKey">
+                            
+                        </div>
+                        <div class = "legend9a legendValue">
+                            
+                        </div>
+                    </div>
+                    
+                    <button class = "element1" type="number" value="2"></button>
+                    <button class = "element2" type="number" value="2"></button>
+                    <button class = "element3" type="number" value="2"></button>
+                    <button class = "element4" type="number" value="2"></button>
+                    <button class = "element5" type="number" value="2"></button>
+                    <button class = "element6" type="number" value="2"></button>
+                    <button class = "element7" type="number" value="2"></button>
+                    <button class = "element8" type="number" value="2"></button>
+                    <button class = "element9" type="number" value="2"></button>
+                    <button class = "element10" type="number" value="2"></button>
+                    <button class = "element11" type="number" value="2"></button>
+                    <button class = "element12" type="number" value="2"></button>
+                    <button class = "element13" type="number" value="2"></button>
+                    <button class = "element14" type="number" value="2"></button>
+                    <button class = "element15" type="number" value="2"></button>
+
+                    <button class="monitorLabel" type="number" value="2">2</button>
+                                
+                </div>
+                
+                <div class = "label"></div>
+            </div>
+            
+            <div class = "module module7">
+            <div class = "monitor monitor7">
+                <div class = "screen">
+                    <div class = "screenKey">
+                        <div class= "screenKeyUpper">
+                            
+                        </div>
+                            
+                        <div class = "screenKeyLower"></div>
+                    </div>
+
+                    <div class = "screenValue">
+                        
+                    </div>
+                </div>
+                        
+                <div class = "legend">
+                    <div class =  "legend1 legendKey">
+                        
+                    </div>
+                    <div class = "legend1a legendValue">
+                        
+                    </div>
+                    <div class =  "legend2 legendKey">
+                        
+                    </div>
+                    <div class = "legend2a legendValue">
+                        
+                    </div>
+                    <div class =  "legend3 legendKey">
+                        
+                    </div>
+                    <div class = "legend3a legendValue">
+                        
+                    </div>
+                    <div class =  "legend4 legendKey">
+                        
+                    </div>
+                    <div class = "legend4a legendValue">
+                        
+                    </div>
+                    <div class =  "legend5 legendKey">
+                        
+                    </div>
+                    <div class = "legend5a legendValue">
+                        
+                    </div>
+                    <div class =  "legend6 legendKey">
+                        
+                    </div>
+                    <div class = "legend6a legendValue">
+                        
+                    </div>
+                    <div class =  "legend7 legendKey">
+                        
+                    </div>
+                    <div class = "legend7a legendValue">
+                        
+                    </div>
+                    <div class =  "legend8 legendKey">
+                        
+                    </div>
+                    <div class = "legend8a legendValue">
+                        
+                    </div>
+                    <div class =  "legend9 legendKey">
+                        
+                    </div>
+                    <div class = "legend9a legendValue">
+                        
+                    </div>
+                </div>
+                
+                <button class = "element1" type="number" value="7"></button>
+                <button class = "element2" type="number" value="7"></button>
+                <button class = "element3" type="number" value="7"></button>
+                <button class = "element4" type="number" value="7"></button>
+                <button class = "element5" type="number" value="7"></button>
+                <button class = "element6" type="number" value="7"></button>
+                <button class = "element7" type="number" value="7"></button>
+                <button class = "element8" type="number" value="7"></button>
+                <button class = "element9" type="number" value="7"></button>
+                <button class = "element10" type="number" value="7"></button>
+                <button class = "element11" type="number" value="7"></button>
+                <button class = "element12" type="number" value="7"></button>
+                <button class = "element13" type="number" value="7"></button>
+                <button class = "element14" type="number" value="7"></button>
+                <button class = "element15" type="number" value="7"></button>
+
+                <button class="monitorLabel" type="number" value="7">7</button>
+            </div>
+            <div class = "label">
+
+            </div>
+            </div>
+                
+            </div>
+
+        <div class = "row" id = "row3">   
+
+            <div class = "module module3">
+            
+                <div class = "monitor monitor3">
+
+                    <div class = "screen">
+                        
+                        <div class = "screenKey">
+                            <div class= "screenKeyUpper">
+                                
+                            </div>
+                                
+                            <div class = "screenKeyLower"></div>
+                        </div>
+
+                        <div class = "screenValue">
+                            
+                        </div>
+
+                    </div>
+                    
+                    <div class = "legend">
+                        <div class =  "legend1 legendKey">
+                            
+                        </div>
+                        <div class = "legend1a legendValue">
+                            
+                        </div>
+                        <div class =  "legend2 legendKey">
+                            
+                        </div>
+                        <div class = "legend2a legendValue">
+                            
+                        </div>
+                        <div class =  "legend3 legendKey">
+                            
+                        </div>
+                        <div class = "legend3a legendValue">
+                            
+                        </div>
+                        <div class =  "legend4 legendKey">
+                            
+                        </div>
+                        <div class = "legend4a legendValue">
+                            
+                        </div>
+                        <div class =  "legend5 legendKey">
+                            
+                        </div>
+                        <div class = "legend5a legendValue">
+                            
+                        </div>
+                        <div class =  "legend6 legendKey">
+                            
+                        </div>
+                        <div class = "legend6a legendValue">
+                            
+                        </div>
+                        <div class =  "legend7 legendKey">
+                            
+                        </div>
+                        <div class = "legend7a legendValue">
+                            
+                        </div>
+                        <div class =  "legend8 legendKey">
+                            
+                        </div>
+                        <div class = "legend8a legendValue">
+                            
+                        </div>
+                        <div class =  "legend9 legendKey">
+                            
+                        </div>
+                        <div class = "legend9a legendValue">
+                            
+                        </div>
+                    </div>
+                    
+                    <button class = "element1" type="number" value="3"></button>
+                    <button class = "element2" type="number" value="3"></button>
+                    <button class = "element3" type="number" value="3"></button>
+                    <button class = "element4" type="number" value="3"></button>
+                    <button class = "element5" type="number" value="3"></button>
+                    <button class = "element6" type="number" value="3"></button>
+                    <button class = "element7" type="number" value="3"></button>
+                    <button class = "element8" type="number" value="3"></button>
+                    <button class = "element9" type="number" value="3"></button>
+                    <button class = "element10" type="number" value="3"></button>
+                    <button class = "element11" type="number" value="3"></button>
+                    <button class = "element12" type="number" value="3"></button>
+                    <button class = "element13" type="number" value="3"></button>
+                    <button class = "element14" type="number" value="3"></button>
+                    <button class = "element15" type="number" value="3"></button>
+
+                    <button class="monitorLabel" type="number" value="3">3</button>
+                                
+                </div>
+                
+                <div class = "label"></div>
+            </div>
+            
+                <div class = "module module8">
+                    <div class = "monitor monitor8">
+                        <div class = "screen">
+                            <div class = "screenKey">
+                                <div class= "screenKeyUpper">
+                                    
+                                </div>
+                                        
+                                <div class = "screenKeyLower"></div>
+                            </div>
+            
+                            <div class = "screenValue">
+                                
+                            </div>
+                        </div>
+                                
+                        <div class = "legend">
+                            <div class =  "legend1 legendKey">
+                                
+                            </div>
+                            <div class = "legend1a legendValue">
+                                
+                            </div>
+                            <div class =  "legend2 legendKey">
+                                
+                            </div>
+                            <div class = "legend2a legendValue">
+                                
+                            </div>
+                            <div class =  "legend3 legendKey">
+                                
+                            </div>
+                            <div class = "legend3a legendValue">
+                                
+                            </div>
+                            <div class =  "legend4 legendKey">
+                                
+                            </div>
+                            <div class = "legend4a legendValue">
+                                
+                            </div>
+                            <div class =  "legend5 legendKey">
+                                
+                            </div>
+                            <div class = "legend5a legendValue">
+                                
+                            </div>
+                            <div class =  "legend6 legendKey">
+                                
+                            </div>
+                            <div class = "legend6a legendValue">
+                                
+                            </div>
+                            <div class =  "legend7 legendKey">
+                                
+                            </div>
+                            <div class = "legend7a legendValue">
+                                
+                            </div>
+                            <div class =  "legend8 legendKey">
+                                
+                            </div>
+                            <div class = "legend8a legendValue">
+                                
+                            </div>
+                            <div class =  "legend9 legendKey">
+                                
+                            </div>
+                            <div class = "legend9a legendValue">
+                                
+                            </div>
+                        </div>
+                        
+                        <button class = "element1" type="number" value="8"></button>
+                        <button class = "element2" type="number" value="8"></button>
+                        <button class = "element3" type="number" value="8"></button>
+                        <button class = "element4" type="number" value="8"></button>
+                        <button class = "element5" type="number" value="8"></button>
+                        <button class = "element6" type="number" value="8"></button>
+                        <button class = "element7" type="number" value="8"></button>
+                        <button class = "element8" type="number" value="8"></button>
+                        <button class = "element9" type="number" value="8"></button>
+                        <button class = "element10" type="number" value="8"></button>
+                        <button class = "element11" type="number" value="8"></button>
+                        <button class = "element12" type="number" value="8"></button>
+                        <button class = "element13" type="number" value="8"></button>
+                        <button class = "element14" type="number" value="8"></button>
+                        <button class = "element15" type="number" value="8"></button>
+
+                        <button class="monitorLabel" type="number" value="8">8</button>
+                    </div>
+                    <div class = "label">
+        
+                    </div>
+                </div>
+                
+            </div> 
+            
+        <div class = "row" id = "row4">   
+
+                <div class = "module module4">
+                
+                    <div class = "monitor monitor4">
+        
+                        <div class = "screen">
+                            
+                            <div class = "screenKey">
+                                <div class= "screenKeyUpper">
+                                    
+                                </div>
+                                    
+                                <div class = "screenKeyLower"></div>
+                            </div>
+        
+                            <div class = "screenValue">
+                                
+                            </div>
+        
+                        </div>
+                        
+                        <div class = "legend">
+                            <div class =  "legend1 legendKey">
+                                
+                            </div>
+                            <div class = "legend1a legendValue">
+                                
+                            </div>
+                            <div class =  "legend2 legendKey">
+                                
+                            </div>
+                            <div class = "legend2a legendValue">
+                                
+                            </div>
+                            <div class =  "legend3 legendKey">
+                                
+                            </div>
+                            <div class = "legend3a legendValue">
+                                
+                            </div>
+                            <div class =  "legend4 legendKey">
+                                
+                            </div>
+                            <div class = "legend4a legendValue">
+                                
+                            </div>
+                            <div class =  "legend5 legendKey">
+                                
+                            </div>
+                            <div class = "legend5a legendValue">
+                                
+                            </div>
+                            <div class =  "legend6 legendKey">
+                                
+                            </div>
+                            <div class = "legend6a legendValue">
+                                
+                            </div>
+                            <div class =  "legend7 legendKey">
+                                
+                            </div>
+                            <div class = "legend7a legendValue">
+                                
+                            </div>
+                            <div class =  "legend8 legendKey">
+                                
+                            </div>
+                            <div class = "legend8a legendValue">
+                                
+                            </div>
+                            <div class =  "legend9 legendKey">
+                                
+                            </div>
+                            <div class = "legend9a legendValue">
+                                
+                            </div>
+                        </div>
+                        
+                        <button class = "element1" type="number" value="4"></button>
+                        <button class = "element2" type="number" value="4"></button>
+                        <button class = "element3" type="number" value="4"></button>
+                        <button class = "element4" type="number" value="4"></button>
+                        <button class = "element5" type="number" value="4"></button>
+                        <button class = "element6" type="number" value="4"></button>
+                        <button class = "element7" type="number" value="4"></button>
+                        <button class = "element8" type="number" value="4"></button>
+                        <button class = "element9" type="number" value="4"></button>
+                        <button class = "element10" type="number" value="4"></button>
+                        <button class = "element11" type="number" value="4"></button>
+                        <button class = "element12" type="number" value="4"></button>
+                        <button class = "element13" type="number" value="4"></button>
+                        <button class = "element14" type="number" value="4"></button>
+                        <button class = "element15" type="number" value="4"></button>
+        
+                        <button class="monitorLabel" type="number" value="4">4</button>
+                                    
+                    </div>
+                    
+                    <div class = "label"></div>
+                </div>
+                
+                <div class = "module module9">
+                    <div class = "monitor monitor9">
+                        <div class = "screen">
+                            <div class = "screenKey">
+                                <div class= "screenKeyUpper">
+                                    
+                                </div>
+                                        
+                                <div class = "screenKeyLower"></div>
+                            </div>
+            
+                            <div class = "screenValue">
+                                
+                            </div>
+                        </div>
+                            
+                    <div class = "legend">
+                        <div class =  "legend1 legendKey">
+                            
+                        </div>
+                        <div class = "legend1a legendValue">
+                            
+                        </div>
+                        <div class =  "legend2 legendKey">
+                            
+                        </div>
+                        <div class = "legend2a legendValue">
+                            
+                        </div>
+                        <div class =  "legend3 legendKey">
+                            
+                        </div>
+                        <div class = "legend3a legendValue">
+                            
+                        </div>
+                        <div class =  "legend4 legendKey">
+                            
+                        </div>
+                        <div class = "legend4a legendValue">
+                            
+                        </div>
+                        <div class =  "legend5 legendKey">
+                            
+                        </div>
+                        <div class = "legend5a legendValue">
+                            
+                        </div>
+                        <div class =  "legend6 legendKey">
+                            
+                        </div>
+                        <div class = "legend6a legendValue">
+                            
+                        </div>
+                        <div class =  "legend7 legendKey">
+                            
+                        </div>
+                        <div class = "legend7a legendValue">
+                            
+                        </div>
+                        <div class =  "legend8 legendKey">
+                            
+                        </div>
+                        <div class = "legend8a legendValue">
+                            
+                        </div>
+                        <div class =  "legend9 legendKey">
+                            
+                        </div>
+                        <div class = "legend9a legendValue">
+                            
+                        </div>
+                    </div>
+                    
+                    <button class = "element1" type="number" value="9"></button>
+                    <button class = "element2" type="number" value="9"></button>
+                    <button class = "element3" type="number" value="9"></button>
+                    <button class = "element4" type="number" value="9"></button>
+                    <button class = "element5" type="number" value="9"></button>
+                    <button class = "element6" type="number" value="9"></button>
+                    <button class = "element7" type="number" value="9"></button>
+                    <button class = "element8" type="number" value="9"></button>
+                    <button class = "element9" type="number" value="9"></button>
+                    <button class = "element10" type="number" value="9"></button>
+                    <button class = "element11" type="number" value="9"></button>
+                    <button class = "element12" type="number" value="9"></button>
+                    <button class = "element13" type="number" value="9"></button>
+                    <button class = "element14" type="number" value="9"></button>
+                    <button class = "element15" type="number" value="9"></button>
+
+                    <button class="monitorLabel" type="number" value="9">9</button>
+                </div>
+                <div class = "label">
+
+                </div>
+            </div>
+                
+            </div>
+
+        <div class = "row" id = "row5">   
+
+            <div class = "module module5">
+            
+                <div class = "monitor monitor5">
+
+                    <div class = "screen">
+                        
+                        <div class = "screenKey">
+                            <div class= "screenKeyUpper">
+                                
+                            </div>
+                                
+                            <div class = "screenKeyLower"></div>
+                        </div>
+
+                        <div class = "screenValue">
+                            
+                        </div>
+
+                    </div>
+                    
+                    <div class = "legend">
+                        <div class =  "legend1 legendKey">
+                            
+                        </div>
+                        <div class = "legend1a legendValue">
+                            
+                        </div>
+                        <div class =  "legend2 legendKey">
+                            
+                        </div>
+                        <div class = "legend2a legendValue">
+                            
+                        </div>
+                        <div class =  "legend3 legendKey">
+                            
+                        </div>
+                        <div class = "legend3a legendValue">
+                            
+                        </div>
+                        <div class =  "legend4 legendKey">
+                            
+                        </div>
+                        <div class = "legend4a legendValue">
+                            
+                        </div>
+                        <div class =  "legend5 legendKey">
+                            
+                        </div>
+                        <div class = "legend5a legendValue">
+                            
+                        </div>
+                        <div class =  "legend6 legendKey">
+                            
+                        </div>
+                        <div class = "legend6a legendValue">
+                            
+                        </div>
+                        <div class =  "legend7 legendKey">
+                            
+                        </div>
+                        <div class = "legend7a legendValue">
+                            
+                        </div>
+                        <div class =  "legend8 legendKey">
+                            
+                        </div>
+                        <div class = "legend8a legendValue">
+                            
+                        </div>
+                        <div class =  "legend9 legendKey">
+                            
+                        </div>
+                        <div class = "legend9a legendValue">
+                            
+                        </div>
+                    </div>
+                    
+                    <button class = "element1" type="number" value="5"></button>
+                    <button class = "element2" type="number" value="5"></button>
+                    <button class = "element3" type="number" value="5"></button>
+                    <button class = "element4" type="number" value="5"></button>
+                    <button class = "element5" type="number" value="5"></button>
+                    <button class = "element6" type="number" value="5"></button>
+                    <button class = "element7" type="number" value="5"></button>
+                    <button class = "element8" type="number" value="5"></button>
+                    <button class = "element9" type="number" value="5"></button>
+                    <button class = "element10" type="number" value="5"></button>
+                    <button class = "element11" type="number" value="5"></button>
+                    <button class = "element12" type="number" value="5"></button>
+                    <button class = "element13" type="number" value="5"></button>
+                    <button class = "element14" type="number" value="5"></button>
+                    <button class = "element15" type="number" value="5"></button>
+
+                    <button class="monitorLabel" type="number" value="5">5</button>
+                                
+                </div>
+                
+                <div class = "label"></div>
+            </div>
+            
+            <div class = "module module10">
+                <div class = "monitor monitor10">
+                    <div class = "screen">
+                            <div class = "screenKey">
+                        <div class= "screenKeyUpper">
+                            
+                        </div>
+                                
+                        <div class = "screenKeyLower"></div>
+                        </div>
+
+                        <div class = "screenValue">
+                            
+                        </div>
+                    </div>
+                        
+                    <div class = "legend">
+                        <div class =  "legend1 legendKey">
+                            
+                        </div>
+                        <div class = "legend1a legendValue">
+                            
+                        </div>
+                        <div class =  "legend2 legendKey">
+                            
+                        </div>
+                        <div class = "legend2a legendValue">
+                            
+                        </div>
+                        <div class =  "legend3 legendKey">
+                            
+                        </div>
+                        <div class = "legend3a legendValue">
+                            
+                        </div>
+                        <div class =  "legend4 legendKey">
+                            
+                        </div>
+                        <div class = "legend4a legendValue">
+                            
+                        </div>
+                        <div class =  "legend5 legendKey">
+                            
+                        </div>
+                        <div class = "legend5a legendValue">
+                            
+                        </div>
+                        <div class =  "legend6 legendKey">
+                            
+                        </div>
+                        <div class = "legend6a legendValue">
+                            
+                        </div>
+                        <div class =  "legend7 legendKey">
+                            
+                        </div>
+                        <div class = "legend7a legendValue">
+                            
+                        </div>
+                        <div class =  "legend8 legendKey">
+                            
+                        </div>
+                        <div class = "legend8a legendValue">
+                            
+                        </div>
+                        <div class =  "legend9 legendKey">
+                            
+                        </div>
+                        <div class = "legend9a legendValue">
+                            
+                        </div>
+                    </div>
+                    
+                    <button class = "element1" type="number" value="10"></button>
+                    <button class = "element2" type="number" value="10"></button>
+                    <button class = "element3" type="number" value="10"></button>
+                    <button class = "element4" type="number" value="10"></button>
+                    <button class = "element5" type="number" value="10"></button>
+                    <button class = "element6" type="number" value="10"></button>
+                    <button class = "element7" type="number" value="10"></button>
+                    <button class = "element8" type="number" value="10"></button>
+                    <button class = "element9" type="number" value="10"></button>
+                    <button class = "element10" type="number" value="10"></button>
+                    <button class = "element11" type="number" value="10"></button>
+                    <button class = "element12" type="number" value="10"></button>
+                    <button class = "element13" type="number" value="10"></button>
+                    <button class = "element14" type="number" value="10"></button>
+                    <button class = "element15" type="number" value="10"></button>
+
+                    <button class="monitorLabel" type="number" value="10">10</button>
+                </div>
+                <div class = "label">
+
+                </div>
+            </div>
+                
+        </div>
+
+    </div>
+
+  </div>
+  <div id="underConsole">
+      <!-- console controls (not used yet) -->
+      <input id="inputBox" type="text">
+      <button id='submitButton'>SUBMIT</button>
+    </div>
+</div>   

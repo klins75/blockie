@@ -51,7 +51,7 @@ class Block {
 					this.pathInstructions.length = 0;
 					window.cancelAnimationFrame(requestID2);
 					this.pathIndex = 0;
-					
+					displayCaption("Whew, made it!",3);
 				}  
 			}
 		}
@@ -118,13 +118,10 @@ function takeStep(e){
 			e.frameX += 100;
 		}			
 	} else{
-		console.log(e.frameX);
 		e.frameX = 0;
-		count = 0;
-		console.log('leaving function');
-		
+		count = 0;		
 		return;			
-	} console.log(count);
+	} 
 	count += 2;	
 }
 	

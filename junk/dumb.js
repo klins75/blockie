@@ -248,8 +248,6 @@ makeMonitors(10).forEach((monitor, index) => {
 
 function startThing() {
 
-  console.log('console started...');
-
   function highLight(elem, color) {
       let backgroundColor = window.getComputedStyle(elem, null).getPropertyValue("background-color"); 
       if(backgroundColor == 'rgb(255, 255, 255)') {
@@ -273,10 +271,8 @@ function startThing() {
 
   function monitorButtons(e) {
     let mod = e.target.value;
-    console.log(e.target.className);
     let screen = document.querySelector(`.module${mod} .screenValue`);
     let thisButton = e.target.className;
-    console.log(`button class: ${thisButton}`);
     if (thisButton == 'monitorLabel') {
         highLight(screen, 'yellow');
     }

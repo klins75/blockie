@@ -3,7 +3,7 @@
 }
 
 html, body {                                                                  
-  height: 100%; width: 100%;
+  height: 100%; /*width: 100%;*/
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,13 +15,14 @@ html, body {
 }
 
 #col1 {
-  height: 100%; width: 50%;
+  height: 100%; width: 60%;
   display: flex; flex-direction: column;
+  justify-content: center;
 }
 
 #col2 {
   height: 100%; width: 50%;
-  display: flex; flex-direction: column;
+  display: none; flex-direction: column;
 }
 
 /* -------- COLUMN ONE ----------- */

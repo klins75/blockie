@@ -3,7 +3,6 @@
 // CANVAS MOUSEDOWN
 canvasUpper.addEventListener('mousedown', function(e){
   eWhich = e.which;
-  // console.log(eWhich);
   mouseDown = true;
   e.preventDefault();
 });
